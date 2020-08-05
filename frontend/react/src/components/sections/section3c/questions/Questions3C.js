@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { TextField, Choice } from "@cmsgov/design-system-core";
 import FillForm from "../../../layout/FillForm";
+import { InputGrid } from "../../../fields/InputGrid";
+import { SynthesizedTable } from "../../../layout/SynthesizedTable";
 
 class Questions3C extends Component {
   constructor(props) {
@@ -435,6 +437,12 @@ class Questions3C extends Component {
             onChange={this.changeText}
           />
         </div>
+        <h3 className="part-header">Part 3: Duration Measure of Children Enrolled in Title XIX</h3>
+        <InputGrid index="1" title="Total number of children newly enrolled in title XIX in the second quarter of FFY 2018:" />
+        <InputGrid index="2" title="Enrollment status 6 months later:" />
+        <InputGrid index="3" title="Enrollment status 12 months later:" />
+        <InputGrid index="4" title="Enrollment status 18 months later:" />
+        <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
       </form>
     )
   }
