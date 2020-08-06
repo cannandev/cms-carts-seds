@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { TextField, Choice } from "@cmsgov/design-system-core";
 import FillForm from "../../../layout/FillForm";
@@ -80,10 +80,6 @@ class Questions3C extends Component {
 
     el.target.classList.toggle("active");
 
-    // Boolean, Set values on active
-    let isActive = el.target.classList.contains("active");
-
-    const elementName = el.target.name;
     //This dynamically updates the element with last years response. Need to figure out a way to get all sub elements
     if (el.target.type === "textField") {
       var newstate = {};
