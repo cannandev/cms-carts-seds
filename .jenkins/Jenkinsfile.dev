@@ -96,7 +96,8 @@ pipeline {
         }
       }
     }
-    stage("Deploy Data Layer") {
+    
+/*    stage("Deploy Data Layer") {
       when {
         expression { env.DEPLOY == "true"}
       }
@@ -120,7 +121,7 @@ pipeline {
           }
         }
       }
-    }
+    }   */
     stage("Deploy Frontend Layer") {
       when {
         expression { env.DEPLOY == "true"}
