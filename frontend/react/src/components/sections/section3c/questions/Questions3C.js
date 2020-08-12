@@ -444,7 +444,11 @@ class Questions3C extends Component {
             <p>Children must be 16.5 years or younger when they enroll to ensure they don’t age out of the program by the end of the 18-month tracking period.</p>
             <p>If your eligibility system doesn’t have the ability to track a cohort, you may need to use a unique identifier or flag to track each child over the 18-month period.</p>
           </div>
-          <Choice className="part__checkboxFlag" name={`2020-03-c-04-a`} id={`2020-03-c-04-01-unmarked_descendants`}>{checkboxFlagText}</Choice>
+          <Choice
+            className="part__checkboxFlag"
+            name={`2020-03-c-04-a`}
+            id={`2020-03-c-04-01-unmarked_descendants`}
+          >{checkboxFlagText}</Choice>
           <InputGrid
             marker="1"
             id={`2020-03-c-04-01`}
@@ -492,11 +496,11 @@ class Questions3C extends Component {
             hint=""
             isChild="true" />
 
-          <TextField id={`2020-03-c-04-05`} label="5. Anything else you'd like to add about your data?" />
+          <TextField id={`2020-03-c-04-05`} label="5. Anything else you'd like to add about your data?" multiline />
 
           <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
         </div>
-      </form>
+      </form >
     )
   }
 }
