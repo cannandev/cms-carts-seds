@@ -102,6 +102,8 @@ class Questions3C extends Component {
 
 
   render() {
+    const checkboxFlagText = `I don’t have data for the individual age groups. I’ll report data for the total number for all age groups (0-18 years) instead.`
+
     return (
       <form>
         <div>
@@ -433,12 +435,67 @@ class Questions3C extends Component {
             onChange={this.changeText}
           />
         </div>
-        <h3 className="part-header">Part 3: Duration Measure of Children Enrolled in Title XIX</h3>
-        <InputGrid index="1" title="Total number of children newly enrolled in title XIX in the second quarter of FFY 2018:" />
-        <InputGrid index="2" title="Enrollment status 6 months later:" />
-        <InputGrid index="3" title="Enrollment status 12 months later:" />
-        <InputGrid index="4" title="Enrollment status 18 months later:" />
-        <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
+        <h3 className="part-header">Part 3: Eligibility for Redetermination in CHIP</h3>
+
+        <div className="part" id={"2020-03-c-04"}>
+          <h3 className="part__header">Part 4: Tracking a CHIP cohort over 18 months</h3>
+          <div className="part__description">
+            <p>Tracking a cohort of children enrolled in CHIP (Title XXI) will measure how long a specific group stays enrolled over a 18-month period. This information is required by Section 402(a) of CHIPRA. To track your cohort, identify a group of children ages 0 to 17 years who are newly enrolled in CHIP (Medicaid Expansion CHIP, Separate CHIP, or both) as of the first three months (Jan-Mar) of the last federal fiscal year.</p>
+            <p>Children must be 16.5 years or younger when they enroll to ensure they don’t age out of the program by the end of the 18-month tracking period.</p>
+            <p>If your eligibility system doesn’t have the ability to track a cohort, you may need to use a unique identifier or flag to track each child over the 18-month period.</p>
+          </div>
+          <Choice className="part__checkboxFlag" name={`2020-03-c-04-a`} id={`2020-03-c-04-01-unmarked_descendants`}>{checkboxFlagText}</Choice>
+          <InputGrid
+            marker="1"
+            id={`2020-03-c-04-01`}
+            title="January - March 2019 (start of the cohort)"
+            label="How many children were newly enrolled in CHIP between January and March of the last federal fiscal year?"
+            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
+            isChild="false" />
+          <InputGrid
+            marker="2"
+            id={`2020-03-c-04-02`}
+            title="July - September 2019 (6 months later)"
+            label="How many children were still continuously enrolled in CHIP six months later?"
+            hint="Only include children that didn’t have a break in coverage during the six-month period."
+            isChild="false" />
+          <InputGrid
+            marker="3"
+            id={`2020-03-c-04-03`}
+            title="January - March 2020 (12 months later)"
+            label="How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
+            hint=""
+            isChild="false" />
+          <InputGrid
+            marker="3a"
+            id={`2020-03-c-04-03-a`}
+            title=""
+            label="How many children had a break in CHIP coverage but were re-enolled in CHIP six months later, and were enrolled in Medicaid during the break?
+            "
+            hint=""
+            isChild="true" />
+          <InputGrid
+            marker="4"
+            id={`2020-03-c-04-04`}
+            title="July - September of 2020 (18 months later)"
+            label="How many children were no longer enrolled in CHIP six months later?"
+            hint="Possible reasons for no longer being enrolled: \nTransferred to another health insurance program other than CHIP
+            \nDidn’t meet eligibility criteria anymore
+            \nDidn’t complete documentation
+            \nDidn’t pay a premium or enrollment fee"
+            isChild="false" />
+          <InputGrid
+            marker="4a"
+            id={`2020-03-c-04-04-a`}
+            title=""
+            label="How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
+            hint=""
+            isChild="true" />
+
+          <TextField id={`2020-03-c-04-05`} label="5. Anything else you'd like to add about your data?" />
+
+          <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
+        </div>
       </form>
     )
   }
