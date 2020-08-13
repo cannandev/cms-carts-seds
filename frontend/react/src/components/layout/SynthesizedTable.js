@@ -15,8 +15,8 @@ export const SynthesizedTable = props => {
         <tbody>
           <tr>
             <th scope="row">Total number of children newly enrolled in title XIX in the second quarter of FFY 2018</th>
-            <td>3715</td>
-            <td>100%</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">Enrollment status 6 months later</th>
