@@ -4,6 +4,7 @@ import { TextField, Choice } from "@cmsgov/design-system-core";
 import FillForm from "../../../layout/FillForm";
 import { InputGrid } from "../../../fields/InputGrid";
 import { SynthesizedTable } from "../../../layout/SynthesizedTable";
+import { Checkbox } from "../../../fields/Checkbox";
 
 class Questions3C extends Component {
   constructor(props) {
@@ -102,8 +103,6 @@ class Questions3C extends Component {
 
 
   render() {
-    const checkboxFlagText = `I don’t have data for the individual age groups. I’ll report data for the total number for all age groups (0-18 years) instead.`
-
     return (
       <form>
         <div>
@@ -444,11 +443,7 @@ class Questions3C extends Component {
             <p>Children must be 16.5 years or younger when they enroll to ensure they don’t age out of the program by the end of the 18-month tracking period.</p>
             <p>If your eligibility system doesn’t have the ability to track a cohort, you may need to use a unique identifier or flag to track each child over the 18-month period.</p>
           </div>
-          <Choice
-            className="part__checkboxFlag"
-            name={`2020-03-c-04-a`}
-            id={`2020-03-c-04-01-unmarked_descendants`}
-          >{checkboxFlagText}</Choice>
+          <Checkbox />
           <InputGrid
             marker="1"
             id={`2020-03-c-04-01`}
