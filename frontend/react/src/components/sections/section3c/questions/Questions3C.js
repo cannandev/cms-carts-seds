@@ -449,7 +449,7 @@ class Questions3C extends Component {
             title="January - March 2019 (start of the cohort)"
             label="How many children were newly enrolled in CHIP between January and March of the last federal fiscal year?"
             hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
-            isChild="false" />
+          />
           <InputGrid
 
             id={`2020-03-c-04-02`}
@@ -467,8 +467,7 @@ class Questions3C extends Component {
           <InputGrid
             id={`2020-03-c-04-04`}
             title=""
-            label="How many children had a break in CHIP coverage but were re-enolled in CHIP six months later, and were enrolled in Medicaid during the break?
-            "
+            label="How many children had a break in CHIP coverage but were re-enolled in CHIP six months later, and were enrolled in Medicaid during the break?"
             hint=""
           />
           <InputGrid
@@ -487,7 +486,7 @@ class Questions3C extends Component {
             hint=""
           />
 
-          <TextField id={`2020-03-c-04-07`} label="7. Anything else you'd like to add about your data?" multiline />
+          <TextField id={`2020-03-c-04-07`} label={`${`7`}. Anything else you'd like to add about your data?`} multiline />
 
           <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
         </div>
