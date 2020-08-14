@@ -443,7 +443,7 @@ class Questions3C extends Component {
             <p>Children must be 16.5 years or younger when they enroll to ensure they don’t age out of the program by the end of the 18-month tracking period.</p>
             <p>If your eligibility system doesn’t have the ability to track a cohort, you may need to use a unique identifier or flag to track each child over the 18-month period.</p>
           </div>
-          <Checkbox />
+          <Checkbox text="I don’t have data for the individual age groups. I’ll report data for the total number for all age groups (0-18 years) instead." />
           <InputGrid
             id={`2020-03-c-04-01`}
             title="January - March 2019 (start of the cohort)"
@@ -458,7 +458,6 @@ class Questions3C extends Component {
             hint="Only include children that didn’t have a break in coverage during the six-month period."
           />
           <InputGrid
-
             id={`2020-03-c-04-03`}
             title="January - March 2020 (12 months later)"
             label="How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
