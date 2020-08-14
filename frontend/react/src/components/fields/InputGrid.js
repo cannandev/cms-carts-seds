@@ -11,7 +11,7 @@ export const InputGrid = question => {
       <div className="ds-l-row input-grid__total">
         <div className="ds-l-col"><TextField name={`2020-03-c-04-${marker}-a`} id={`${question.id}-a`} numeric label="Total for all ages (0-16 year olds)" size="medium" /></div>
       </div>
-      <div className="ds-l-row input-grid__subset ds-u-margin-top--0">
+      <div className="ds-l-row input-grid__groups ds-u-margin-top--0">
         <div className="ds-l-col"><TextField name={`${question.id}-b`} id={`${question.id}-b`} numeric label="0-1 year olds" /></div>
         <div className="ds-l-col"><TextField name={`${question.id}-c`} id={`${question.id}-c`} numeric label="1-5 year olds" /></div>
         <div className="ds-l-col"><TextField name={`${question.id}-d`} id={`${question.id}-d`} numeric label="6-12 year olds" /></div>
