@@ -35,8 +35,8 @@ class Header extends Component {
             </div>
             <div className="user-details ds-l-col--6 ds-u-padding--2">
               <div className="ds-l-row">
-                <div className="save-status ds-l-col--6">Autosaved</div>
-                <div className="nav-user ds-l-col--6" id="nav-user">
+                <div className="save-status ds-l-col--6 ds-u-border--0">Autosaved</div>
+                {/* <div className="nav-user ds-l-col--6" id="nav-user">
                   <ul className="user-email-button">
                     <li>
                       <a
@@ -57,7 +57,7 @@ class Header extends Component {
                       <a href="javascript:void(0)">Log out</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
