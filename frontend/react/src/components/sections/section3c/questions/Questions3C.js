@@ -329,7 +329,7 @@ class Questions3C extends Component {
             />
           }
           <div className="question">
-            A. Denials of Title XXI Coverage in FFY 2019
+            A. Denials of Title XXI Coverage in FFY 2020
               <div className="hint">
               Enter your data below and the percentages will be
               automatically calculated in the final report.
@@ -436,7 +436,7 @@ class Questions3C extends Component {
         </div>
         <h3 className="part-header">Part 3: Eligibility for Redetermination in CHIP</h3>
 
-        <div className="part" id={"2020-03-c-04"}>
+        <div className="part" id={"2021-03-c-04"}>
           <h3 className="part__header">Part 4: Tracking a CHIP cohort over 18 months</h3>
           <div className="part__description">
             <p>Tracking a cohort of children enrolled in CHIP (Title XXI) will measure how long a specific group stays enrolled over a 18-month period. This information is required by Section 402(a) of CHIPRA. To track your cohort, identify a group of children ages 0 to 17 years who are newly enrolled in CHIP (Medicaid Expansion CHIP, Separate CHIP, or both) as of the first three months (Jan-Mar) of the last federal fiscal year.</p>
@@ -445,33 +445,33 @@ class Questions3C extends Component {
           </div>
           <Checkbox text="I don’t have data for the individual age groups. I’ll report data for the total number for all age groups (0-18 years) instead." />
           <InputGrid
-            id={`2020-03-c-04-01`}
-            title="January - March 2019 (start of the cohort)"
+            id={`2021-03-c-04-01`}
+            title="January - March 2020 (start of the cohort)"
             label="How many children were newly enrolled in CHIP between January and March of the last federal fiscal year?"
-            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
+            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2021 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2020.)"
           />
           <InputGrid
 
-            id={`2020-03-c-04-02`}
-            title="July - September 2019 (6 months later)"
+            id={`2021-03-c-04-02`}
+            title="July - September 2020 (6 months later)"
             label="How many children were still continuously enrolled in CHIP six months later?"
             hint="Only include children that didn’t have a break in coverage during the six-month period."
           />
           <InputGrid
-            id={`2020-03-c-04-03`}
-            title="January - March 2020 (12 months later)"
+            id={`2021-03-c-04-03`}
+            title="January - March 2021 (12 months later)"
             label="How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
             hint=""
           />
           <InputGrid
-            id={`2020-03-c-04-04`}
+            id={`2021-03-c-04-04`}
             title=""
             label="How many children had a break in CHIP coverage but were re-enolled in CHIP six months later, and were enrolled in Medicaid during the break?"
             hint=""
           />
           <InputGrid
-            id={`2020-03-c-04-05`}
-            title="July - September of 2020 (18 months later)"
+            id={`2021-03-c-04-05`}
+            title="July - September of 2021 (18 months later)"
             label="How many children were no longer enrolled in CHIP six months later?"
             hint="Possible reasons for no longer being enrolled: \nTransferred to another health insurance program other than CHIP
             \nDidn’t meet eligibility criteria anymore
@@ -479,13 +479,13 @@ class Questions3C extends Component {
             \nDidn’t pay a premium or enrollment fee"
           />
           <InputGrid
-            id={`2020-03-c-04-06`}
+            id={`2021-03-c-04-06`}
             title=""
             label="How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
             hint=""
           />
 
-          <TextField id={`2020-03-c-04-07`} label={`${`7`}. Anything else you'd like to add about your data?`} multiline />
+          <TextField id={`2021-03-c-04-07`} label={`${`7`}. Anything else you'd like to add about your data?`} multiline />
 
           <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
         </div>
