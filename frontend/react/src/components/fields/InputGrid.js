@@ -1,10 +1,11 @@
 import React from "react"
 import { TextField, HelpDrawerToggle } from "@cmsgov/design-system-core"
+import { HelpDrawer } from "./../layout/HelpDrawer";
+
 
 export const InputGrid = question => {
   return (
-    <div className="input-grid ds-l-container ds-u-padding--0">
-      <h4 className="ds-u-margin-bottom--0 ds-u-padding-top--2">{question.title}</h4>
+    <div className={`input-grid ds-l-container ds-u-padding--1 ${question.subquestion ? `ds-u-margin-left--4` : ``}`}>
       <label className="ds-c-label" >{question.label}</label>
       <span className="ds-c-field__hint">{question.hint}</span>
       {question.helpDrawer && <HelpDrawerToggle>Possible reasons for not being enrolled</HelpDrawerToggle>}
@@ -17,6 +18,7 @@ export const InputGrid = question => {
         <div className="ds-l-col"><TextField name={`${question.id}-d`} id={`${question.id}-d`} numeric label="6-12 year olds" /></div>
         <div className="ds-l-col"><TextField name={`${question.id}-e`} id={`${question.id}-e`} numeric label="13-16 year olds" /></div>
       </div>
+      {/* <HelpDrawer /> */}
     </div>
   )
 }

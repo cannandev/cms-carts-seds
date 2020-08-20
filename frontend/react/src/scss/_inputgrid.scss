@@ -2,7 +2,7 @@
   INPUT-GRID COMPONENT
 **********************/
 
-.part__checkboxFlag ~ .input-grid {
+.part__checkboxFlag ~ fieldset .input-grid {
   .input-grid__total {
     display: none;
   }
@@ -12,7 +12,7 @@
   }
 }
 
-.part__checkboxFlag.checked ~ .input-grid {
+.part__checkboxFlag.checked ~ fieldset .input-grid {
   .input-grid__total {
     display: flex;
   }

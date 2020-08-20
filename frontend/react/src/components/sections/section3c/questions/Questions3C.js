@@ -105,7 +105,7 @@ class Questions3C extends Component {
   render() {
     return (
       <form>
-        <div>
+        <div className="part" id={`2020-03-c-01`}>
           <h3 className="part-header">
             Part 1: Eligibility Renewal and Retention
             </h3>
@@ -165,276 +165,282 @@ class Questions3C extends Component {
                 </Choice>
             </div>
           </div>
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
-              name="p1_q2"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
-            />
-          }
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p1_q2"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
 
-          <div className="question">
-            2. Tell us how your state simplifies the eligibility
-            renewal process for families in order to retain more
-            children in CHIP.
+            <div className="question">
+              2. Tell us how your state simplifies the eligibility
+              renewal process for families in order to retain more
+              children in CHIP.
             </div>
-          <div className="sub-questions">
-            <div id="p1_q2__1">
-              <div className="question">a. Do you conduct follow-up communication with families through caseworkers and outreach workers?</div>
-              <Choice
-                name="p1_q2__1"
-                type="radio"
-                value="yes"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__1 === "yes" ? true : false}
-                onChange={this.setConditional}
-              >
-                Yes
+            <div className="sub-questions">
+              <div id="p1_q2__1">
+                <div className="question">a. Do you conduct follow-up communication with families through caseworkers and outreach workers?</div>
+                <Choice
+                  name="p1_q2__1"
+                  type="radio"
+                  value="yes"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__1 === "yes" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  Yes
                 </Choice>
-              <Choice
-                name="p1_q2__1"
-                type="radio"
-                value="no"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__1 === "no" ? true : false}
-                onChange={this.setConditional}
-              >
-                No
+                <Choice
+                  name="p1_q2__1"
+                  type="radio"
+                  value="no"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__1 === "no" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  No
                 </Choice>
-            </div>
-            <div id="p1_q2__2">
-              <div className="question">b. Do you send renewal reminder notices to all families?</div>
-              <Choice
-                label=""
-                name="p1_q2__2"
-                type="radio"
-                value="yes"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__2 === "yes" ? true : false}
-                onChange={this.setConditional}
-              >
-                Yes
-                </Choice>
-              <Choice
-                name="p1_q2__2"
-                type="radio"
-                value="no"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__2 === "no" ? true : false}
-                onChange={this.setConditional}
-              >
-                No
-                </Choice>
-            </div>
-            <TextField
-              label="c. How many notices do you send to families before disenrolling a child from the program?"
-              labelClassName="p1_q2__3"
-              name="p1_q2__3"
-              value={this.state.p1_q2__3}
-              onChange={this.changeText}
-            />
-            <TextField
-              label="d. How many notices do you send to families before disenrolling a child from the program?"
-              labelClassName="p1_q2__4"
-              name="p1_q2__4"
-              value={this.state.p1_q2__4}
-              onChange={this.changeText}
-            />
-            <TextField
-              label="e. What else do you do to simplify the eligibility renewal process for families in order to increase retention?"
-              labelClassName="p1_q1__5"
-              name="p1_q2__5"
-              value={this.state.p1_q2__5}
-              onChange={this.changeText}
-            />
-          </div>
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
-              name="p1_q3"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
-            />
-          }
-          <div className="question">
-            3. Which retention strategies have been most effective in
-            your state?
-            </div>
-          <TextField
-            hint="Maximum 7,500 characters"
-            label=""
-            multiline
-            rows="6"
-            name="p1_q3"
-            value={this.state.p1_q3}
-            onChange={this.changeText}
-            type='textField'
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
-              name="p1_q4"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
-            />
-          }
-          <div className="question">
-            4. How have you evaluated the effectiveness of your
-            strategies?
-            </div>
-          <TextField
-            hint="Maximum 7,500 characters"
-            label=""
-            multiline
-            rows="6"
-            name="p1_q4"
-            value={this.state.p1_q4}
-            onChange={this.changeText}
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
-              name="p1_q5"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
-            />
-          }
-          <div className="question">
-            5. What data sources and methodology do you use for
-            tracking effectiveness?
-            </div>
-          <TextField
-            hint="Maximum 7,500 characters"
-            label=""
-            multiline
-            rows="6"
-            name="p1_q5"
-            value={this.state.p1_q5}
-            onChange={this.changeText}
-          />
-        </div>
-        <h3 className="part-header">Part 2: Eligibility Data</h3>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
-              name="p2_1"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
-            />
-          }
-          <div className="question">
-            A. Denials of Title XXI Coverage in FFY 2020
-              <div className="hint">
-              Enter your data below and the percentages will be
-              automatically calculated in the final report.
               </div>
+              <div id="p1_q2__2">
+                <div className="question">b. Do you send renewal reminder notices to all families?</div>
+                <Choice
+                  label=""
+                  name="p1_q2__2"
+                  type="radio"
+                  value="yes"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__2 === "yes" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  Yes
+                </Choice>
+                <Choice
+                  name="p1_q2__2"
+                  type="radio"
+                  value="no"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previous_p1_q2__2 === "no" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  No
+                </Choice>
+              </div>
+              <TextField
+                label="c. How many notices do you send to families before disenrolling a child from the program?"
+                labelClassName="p1_q2__3"
+                name="p1_q2__3"
+                value={this.state.p1_q2__3}
+                onChange={this.changeText}
+              />
+              <TextField
+                label="d. How many notices do you send to families before disenrolling a child from the program?"
+                labelClassName="p1_q2__4"
+                name="p1_q2__4"
+                value={this.state.p1_q2__4}
+                onChange={this.changeText}
+              />
+              <TextField
+                label="e. What else do you do to simplify the eligibility renewal process for families in order to increase retention?"
+                labelClassName="p1_q1__5"
+                name="p1_q2__5"
+                value={this.state.p1_q2__5}
+                onChange={this.changeText}
+              />
+            </div>
           </div>
-          <TextField
-            hint="This only includes denials for Title XXI at the time of initial application, not redetermination"
-            label="1. How many applicants were denied Title XXI coverage?"
-            labelClassName="p2_q1"
-            name="p2_q1"
-            value={this.state.p2_q1}
-            onChange={this.changeText}
-          />
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p1_q3"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <div className="question">
+              3. Which retention strategies have been most effective in
+              your state?
+            </div>
+            <TextField
+              hint="Maximum 7,500 characters"
+              label=""
+              multiline
+              rows="6"
+              name="p1_q3"
+              value={this.state.p1_q3}
+              onChange={this.changeText}
+              type='textField'
+            />
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p1_q4"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <div className="question">
+              4. How have you evaluated the effectiveness of your
+              strategies?
+            </div>
+            <TextField
+              hint="Maximum 7,500 characters"
+              label=""
+              multiline
+              rows="6"
+              name="p1_q4"
+              value={this.state.p1_q4}
+              onChange={this.changeText}
+            />
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p1_q5"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <div className="question">
+              5. What data sources and methodology do you use for
+              tracking effectiveness?
+            </div>
+            <TextField
+              hint="Maximum 7,500 characters"
+              label=""
+              multiline
+              rows="6"
+              name="p1_q5"
+              value={this.state.p1_q5}
+              onChange={this.changeText}
+            />
+          </div>
         </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
+
+        <div className="part" id={`2020-03-c-02`}>
+          <h3 className="part-header">Part 2: Eligibility Data</h3>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_1"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <div className="question">
+              A. Denials of Title XXI Coverage in FFY 2020
+              <div className="hint">
+                Enter your data below and the percentages will be
+                automatically calculated in the final report.
+              </div>
+            </div>
+            <TextField
+              hint="This only includes denials for Title XXI at the time of initial application, not redetermination"
+              label="1. How many applicants were denied Title XXI coverage?"
+              labelClassName="p2_q1"
+              name="p2_q1"
+              value={this.state.p2_q1}
+              onChange={this.changeText}
+            />
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q2"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              hint="For example: an incomplete application, missing documentation, missing enrollment fee, etc."
+              label="2. How many applications were denied Title XXI coverage for procedural denials?"
+              labelClassName="p2_q2"
               name="p2_q2"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
+              value={this.state.p2_q2}
+              onChange={this.changeText}
             />
-          }
-          <TextField
-            hint="For example: an incomplete application, missing documentation, missing enrollment fee, etc."
-            label="2. How many applications were denied Title XXI coverage for procedural denials?"
-            labelClassName="p2_q2"
-            name="p2_q2"
-            value={this.state.p2_q2}
-            onChange={this.changeText}
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q3"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              hint="For example: income was too high, income was too low, they were determined Medicaid eligible instead, they had other coverage instead, etc."
+              label="3. How many applicants were denied Title XXI coverage for eligibility denials?"
+              labelClassName="p2_q3"
               name="p2_q3"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
+              value={this.state.p2_q3}
+              onChange={this.changeText}
             />
-          }
-          <TextField
-            hint="For example: income was too high, income was too low, they were determined Medicaid eligible instead, they had other coverage instead, etc."
-            label="3. How many applicants were denied Title XXI coverage for eligibility denials?"
-            labelClassName="p2_q3"
-            name="p2_q3"
-            value={this.state.p2_q3}
-            onChange={this.changeText}
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q4"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              label="4. How many applicants were denied Title XXI coverage and determined eligible for Title XIX instead?"
+              labelClassName="p2_q4"
               name="p2_q4"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
+              value={this.state.p2_q4}
+              onChange={this.changeText}
             />
-          }
-          <TextField
-            label="4. How many applicants were denied Title XXI coverage and determined eligible for Title XIX instead?"
-            labelClassName="p2_q4"
-            name="p2_q4"
-            value={this.state.p2_q4}
-            onChange={this.changeText}
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q5"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              label="5. How many applicants were denied Title XXI coverage for other reasons?"
+              labelClassName="p2_q5"
               name="p2_q5"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
+              value={this.state.p2_q5}
+              onChange={this.changeText}
             />
-          }
-          <TextField
-            label="5. How many applicants were denied Title XXI coverage for other reasons?"
-            labelClassName="p2_q5"
-            name="p2_q5"
-            value={this.state.p2_q5}
-            onChange={this.changeText}
-          />
-        </div>
-        <div className="question-container">
-          {this.props.previousYear === "false" &&
-            <FillForm
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q6"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              hint="(Maximum 7,500 characters)"
+              label="6. Did you run into any limitations when collecting data? Anything else you'd like to add about this section that wasn't already covered?"
+              labelClassName="p2_q6"
+              multiline
               name="p2_q6"
-              title={this.state.fillFormTitle}
-              onClick={this.loadAnswers}
-              type="textField"
+              rows="6"
+              value={this.state.p2_q6}
+              onChange={this.changeText}
             />
-          }
-          <TextField
-            hint="(Maximum 7,500 characters)"
-            label="6. Did you run into any limitations when collecting data? Anything else you'd like to add about this section that wasn't already covered?"
-            labelClassName="p2_q6"
-            multiline
-            name="p2_q6"
-            rows="6"
-            value={this.state.p2_q6}
-            onChange={this.changeText}
-          />
+          </div>
         </div>
-        <h3 className="part-header">Part 3: Eligibility for Redetermination in CHIP</h3>
+
+        <div className="part" id={"2021-03-c-03"}>
+          <h3 className="part-part__header">Part 3: Eligibility for Redetermination in CHIP</h3>
+        </div>
 
         <div className="part" id={"2021-03-c-04"}>
           <h3 className="part__header">Part 4: Tracking a CHIP cohort over 18 months</h3>
@@ -444,126 +450,117 @@ class Questions3C extends Component {
             <p>If your eligibility system doesn’t have the ability to track a cohort, you may need to use a unique identifier or flag to track each child over the 18-month period.</p>
           </div>
           <Checkbox text="I don’t have data for the individual age groups. I’ll report data for the total number for all age groups (0-18 years) instead." />
-          <InputGrid
-            id={`2021-03-c-04-01`}
-            title="January - March 2020 (start of the cohort)"
-            label="1. How many children were newly enrolled in CHIP between January and March?"
-            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
-          />
-          <InputGrid
-            id={`2021-03-c-04-02`}
-            title="July - September 2020 (6 months later)"
-            label="2. How many children were still continuously enrolled in CHIP six months later?"
-            hint="Only include children that didn’t have a break in coverage during the six-month period."
-          />
-          <InputGrid
-            id={`2021-03-c-04-03`}
-            title=""
-            label="3. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
-            hint=""
-          />
-          <InputGrid
-            id={`2021-03-c-04-03-a`}
-            title=""
-            label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later, and enrolled in Medicaid during the break?"
-            hint=""
-            subquestion
-          />
-          <InputGrid
-            id={`2021-03-c-04-04`}
-            title=""
-            label="4. How many children were no longer enrolled in CHIP six months later?"
-            helpDrawer="Possible reasons for no longer being enrolled:\n
+          <fieldset>
+            <legend className="part__legend">January - March 2020 (start of the cohort)</legend>
+            <InputGrid
+              id={`2021-03-c-04-01`}
+              label="1. How many children were newly enrolled in CHIP between January and March?"
+              hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
+            />
+          </fieldset>
+          <fieldset>
+            <legend className="part__legend">July - September 2020 (6 months later)</legend>
+            <InputGrid
+              id={`2021-03-c-04-02`}
+              label="2. How many children were still continuously enrolled in CHIP six months later?"
+              hint="Only include children that didn’t have a break in coverage during the six-month period."
+            />
+            <InputGrid
+              id={`2021-03-c-04-03`}
+              label="3. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
+              hint=""
+            />
+            <InputGrid
+              id={`2021-03-c-04-03-a`}
+              label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later, and enrolled in Medicaid during the break?"
+              hint=""
+              subquestion
+            />
+            <InputGrid
+              id={`2021-03-c-04-04`}
+              label="4. How many children were no longer enrolled in CHIP six months later?"
+              helpDrawer="Possible reasons for no longer being enrolled:\n
               Transferred to another health insurance program other than CHIP\n
               Didn’t meet eligibility criteria anymore\n
               Didn’t complete documentation\n
               Didn’t pay a premium or enrollment fee\n
             "
-          />
-          <InputGrid
-            id={`2021-03-c-04-04-a`}
-            title=""
-            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
-            hint=""
-            subquestion
-          />
-          <TextField id={`2021-03-c-04-05`} label="5. Anything else you’d like to add about your data?" multiline />
-          <div className="ds-c-field__hint ds-u-margin-top--4">Next year you’ll submit the rest of your data at 12 months and 18 months later of tracking your cohort</div>
-          <InputGrid
-            id={`2021-03-c-04-06`}
-            title="January - March 2021 (12 months later)"
-            label="6. How many children were still continuously enrolled in CHIP 12 months later?"
-            hint="Only include children that didn’t have a break in coverage during the 12-month period."
-          />
-          <InputGrid
-            id={`2021-03-c-04-07`}
-            title=""
-            label="7. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later?"
-            hint=""
-          />
-          <InputGrid
-            id={`2021-03-c-04-07-a`}
-            title=""
-            label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later, and enrolled in Medicaid during this break?"
-            hint=""
-            subquestion
-          />
-          <InputGrid
-            id={`2021-03-c-04-08`}
-            title=""
-            label="8. How many children were no longer enrolled in CHIP 12 months later?"
-            helpDrawer="Possible reasons for not being enrolled:\n
-            Transferred to another health insurance program other than CHIP\n
-            Didn’t meet eligibility criteria anymore\n
-            Didn’t complete documentation\n
-            Didn’t pay a premium or enrollment fee\n
-            "
-          />
-          <InputGrid
-            id={`2021-03-c-04-08-a`}
-            title=""
-            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 12 months later?"
-            hint=""
-            subquestion
-          />
-          <InputGrid
-            id={`2021-03-c-04-09`}
-            title="July - September of 2021 (18 months later)"
-            label="9. How many children were still continuously enrolled in CHIP 18 months later?"
-            hint="Only include children that didn’t have a break in coverage throughout the 18-month period."
-          />
-          <InputGrid
-            id={`2020-03-c-04-10`}
-            title=""
-            label="10. How many children had a break in CHIP coverage but were re-enrolled in CHIP 18 months later?"
-            hint=""
-          />
-          <InputGrid
-            id={`2020-03-c-04-10-a`}
-            title=""
-            label="a. How many children had a break in CHIP coverage but were enrolled in CHIP 18 months later, and enrolled in Medicaid during the break?"
-            hint=""
-            subquestion
-          />
-          <InputGrid
-            id={`2020-03-c-04-11`}
-            title=""
-            label="11. How many children were no longer enrolled in CHIP 18 months later?"
-            helpDrawer="Possible reasons for not being enrolled:\n
-            Transferred to another health insurance program other than CHIP\n
-            Didn’t meet eligibility criteria anymore\n
-            Didn’t complete documentation\n
-            Didn’t pay a premium or enrollment fee\n
-            "
-          />
-          <InputGrid
-            id={`2020-03-c-04-11-a`}
-            title=""
-            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 18 months later?"
-            hint=""
-            subquestion
-          />
-          <TextField id={`2021-03-c-04-07`} label={`12. Anything else you’d like to add about your data?`} multiline />
+            />
+            <InputGrid
+              id={`2021-03-c-04-04-a`}
+              label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
+              hint=""
+              subquestion
+            />
+            <TextField id={`2021-03-c-04-05`} label="5. Anything else you’d like to add about your data?" multiline />
+          </fieldset>
+
+          <fieldset className="disabled" disabled>
+            <legend className="part__legend">January - March 2021 (12 months later)</legend>
+            <p className="ds-c-field__hint ds-u-margin-top--4">Next year you’ll submit the rest of your data at 12 months and 18 months later of tracking your cohort</p>
+            <InputGrid
+              id={`2021-03-c-04-06`}
+              label="6. How many children were still continuously enrolled in CHIP 12 months later?"
+              hint="Only include children that didn’t have a break in coverage during the 12-month period."
+            />
+            <InputGrid
+              id={`2021-03-c-04-07`}
+              label="7. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later?"
+              hint=""
+            />
+            <InputGrid
+              id={`2021-03-c-04-07-a`}
+              label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later, and enrolled in Medicaid during this break?"
+              hint=""
+              subquestion
+            />
+            <InputGrid
+              id={`2021-03-c-04-08`}
+              label="8. How many children were no longer enrolled in CHIP 12 months later?"
+              helpDrawer
+            />
+            <InputGrid
+              id={`2021-03-c-04-08-a`}
+              label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 12 months later?"
+              hint=""
+              subquestion
+            />
+          </fieldset>
+
+          <fieldset className="disabled" disabled>
+            <legend className="part__legend">
+              July - September of 2021 (18 months later)
+              </legend>
+            <InputGrid
+              id={`2021-03-c-04-09`}
+              label="9. How many children were still continuously enrolled in CHIP 18 months later?"
+              hint="Only include children that didn’t have a break in coverage throughout the 18-month period."
+            />
+            <InputGrid
+              id={`2020-03-c-04-10`}
+              label="10. How many children had a break in CHIP coverage but were re-enrolled in CHIP 18 months later?"
+              hint=""
+            />
+            <InputGrid
+              id={`2020-03-c-04-10-a`}
+              label="a. How many children had a break in CHIP coverage but were enrolled in CHIP 18 months later, and enrolled in Medicaid during the break?"
+              hint=""
+              subquestion
+            />
+            <InputGrid
+              id={`2020-03-c-04-11`}
+              label="11. How many children were no longer enrolled in CHIP 18 months later?"
+              helpDrawer
+            />
+            <InputGrid
+              id={`2020-03-c-04-11-a`}
+              label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 18 months later?"
+              hint=""
+              subquestion
+            />
+            <TextField id={`2021-03-c-04-07`} label={`12. Anything else you’d like to add about your data?`} multiline />
+          </fieldset>
+
 
           <SynthesizedTable
             type="synthesized"

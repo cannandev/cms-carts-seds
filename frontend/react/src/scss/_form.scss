@@ -284,3 +284,17 @@
     display: block;
   }
 }
+
+.part fieldset {
+  border: 0;
+  margin-top: 32px;
+  margin-left: 0;
+  padding-left:0; 
+}
+
+.part legend {
+  padding: 0;
+  margin: 0;
+  color: $brand-primary;
+  font-weight: bold;
+}

@@ -5,10 +5,10 @@ import React from "react"
  */
 export const SynthesizedTable = props => {
   return (
-    <div className="synthesized-table ds-l-container ds-u-padding-top--4">
-      <legend className="ds-c-field__hint" for="synthesized-table-1">{props.hint}</legend>
+    <div className="synthesized-table ds-u-margin-top--4">
+      <legend className="ds-c-field__hint" for="synthesized-table-1">{props.title}</legend>
       <table class="ds-c-table ds-u-margin-top--2" id="synthesized-table-1">
-        <caption class="ds-c-table__caption">{props.title}</caption>
+        <caption class="ds-c-table__caption">{props.hint}</caption>
         <thead>
           <tr>
             <th scope="col">All children ages 0-18</th>
