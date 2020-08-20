@@ -64,8 +64,12 @@
     padding: ($padding * 2) 0;
     width: 100%;
 
+    a {
+      text-decoration: none;
+    }
+
     .name {
-      color: $black;
+      color: $brand-primary;
       font-weight: $font-weight-bold;
     }
 

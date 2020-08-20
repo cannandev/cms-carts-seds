@@ -30,9 +30,9 @@ class Homepage extends Component {
               <div className="carts-report preview__grid">
                 <div className="report-header ds-l-row">
                   <div className="name ds-l-col--1">Year</div>
-                  <div className="status ds-l-col">Status</div>
-                  <div className="last-edited ds-l-col--5">Last Edited</div>
-                  <div className="actions ds-l-col">Actions</div>
+                  <div className="status ds-l-col--2">Status</div>
+                  <div className="last-edited ds-l-col--6">Last Edited</div>
+                  <div className="actions ds-l-col--3">Actions</div>
                 </div>
 
                 <ReportItem
@@ -44,7 +44,7 @@ class Homepage extends Component {
                   link2URL="#"
                   link2Text="View only"
                   statusText="Overdue"
-                  editor="karen.dalton"
+                  editor="karen.dalton@state.gov"
                 />
 
                 <ReportItem
@@ -54,7 +54,7 @@ class Homepage extends Component {
                   link1URL="/reports/ny/2019"
                   link2URL="#"
                   statusText="Submitted"
-                  editor="karen.dalton"
+                  editor="karen.dalton@state.gov"
                 />
 
                 <ReportItem
@@ -62,11 +62,7 @@ class Homepage extends Component {
                   lastEditedTime="5:43pm"
                   lastEditedDate="1/26/19"
                   link1URL="/reports/ny/2018"
-                  link1Text="Edit"
-                  link2URL="#"
-                  link2Text="View only"
-                  statusText="Uncertified"
-                  editor="karen.dalton"
+                  editor="lucy.santos@state.gov"
                 />
 
                 <ReportItem
@@ -75,7 +71,7 @@ class Homepage extends Component {
                   lastEditedDate="2/13/18"
                   link1URL="/reports/ny/2017"
                   link2URL="#"
-                  editor="karen.dalton"
+                  editor="amos.mac@state.gov"
                 />
 
                 <ReportItem
@@ -84,7 +80,7 @@ class Homepage extends Component {
                   lastEditedDate="3/20/17"
                   link1URL="/reports/ny/2016"
                   link2URL="#"
-                  editor="karen.dalton"
+                  editor="jaminina.rosanthorapple@state.gov"
                 />
               </div>
             </div>
