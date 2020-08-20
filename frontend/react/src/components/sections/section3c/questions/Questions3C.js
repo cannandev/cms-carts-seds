@@ -513,7 +513,7 @@ class Questions3C extends Component {
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Children disenrolled after redeterminationn</th>
+                  <th scope="row">Children disenrolled after redetermination</th>
                   <td></td>
                   <td></td>
                 </tr>
