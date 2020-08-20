@@ -1,15 +1,15 @@
 import React from "react"
-import { TextField } from "@cmsgov/design-system-core"
+import { TextField, HelpDrawerToggle } from "@cmsgov/design-system-core"
 
 export const InputGrid = question => {
-  const marker = (question.id).substring((question.id).length - 1)
   return (
     <div className="input-grid ds-l-container ds-u-padding--0">
       <h4 className="ds-u-margin-bottom--0 ds-u-padding-top--2">{question.title}</h4>
-      <label className="ds-c-label" fieldId={`2020-03-c-04-${marker}`} >{`${marker}. ${question.label}`}</label>
+      <label className="ds-c-label" >{question.label}</label>
       <span className="ds-c-field__hint">{question.hint}</span>
+      {question.helpDrawer && <HelpDrawerToggle>Possible reasons for not being enrolled</HelpDrawerToggle>}
       <div className="ds-l-row input-grid__total">
-        <div className="ds-l-col"><TextField name={`2020-03-c-04-${marker}-a`} id={`${question.id}-a`} numeric label="Total for all ages (0-16 year olds)" size="medium" /></div>
+        <div className="ds-l-col"><TextField name={`${question.id}-a`} id={`${question.id}-a`} numeric label="Total for all ages (0-16 year olds)" size="medium" /></div>
       </div>
       <div className="ds-l-row input-grid__groups ds-u-margin-top--0">
         <div className="ds-l-col"><TextField name={`${question.id}-b`} id={`${question.id}-b`} numeric label="0-1 year olds" /></div>

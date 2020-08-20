@@ -447,45 +447,123 @@ class Questions3C extends Component {
           <InputGrid
             id={`2021-03-c-04-01`}
             title="January - March 2020 (start of the cohort)"
-            label="How many children were newly enrolled in CHIP between January and March of the last federal fiscal year?"
-            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2021 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2020.)"
+            label="1. How many children were newly enrolled in CHIP between January and March?"
+            hint="Only include children that weren’t enrolled in CHIP the previous month. (For example: Children who enrolled in January 2020 are “newly enrolled” if they weren’t enrolled in the CHIP in December 2019.)"
           />
           <InputGrid
-
             id={`2021-03-c-04-02`}
             title="July - September 2020 (6 months later)"
-            label="How many children were still continuously enrolled in CHIP six months later?"
+            label="2. How many children were still continuously enrolled in CHIP six months later?"
             hint="Only include children that didn’t have a break in coverage during the six-month period."
           />
           <InputGrid
             id={`2021-03-c-04-03`}
-            title="January - March 2021 (12 months later)"
-            label="How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
+            title=""
+            label="3. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later?"
             hint=""
+          />
+          <InputGrid
+            id={`2021-03-c-04-03-a`}
+            title=""
+            label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP six months later, and enrolled in Medicaid during the break?"
+            hint=""
+            subquestion
           />
           <InputGrid
             id={`2021-03-c-04-04`}
             title=""
-            label="How many children had a break in CHIP coverage but were re-enolled in CHIP six months later, and were enrolled in Medicaid during the break?"
-            hint=""
+            label="4. How many children were no longer enrolled in CHIP six months later?"
+            helpDrawer="Possible reasons for no longer being enrolled:\n
+              Transferred to another health insurance program other than CHIP\n
+              Didn’t meet eligibility criteria anymore\n
+              Didn’t complete documentation\n
+              Didn’t pay a premium or enrollment fee\n
+            "
           />
           <InputGrid
-            id={`2021-03-c-04-05`}
-            title="July - September of 2021 (18 months later)"
-            label="How many children were no longer enrolled in CHIP six months later?"
-            hint="Possible reasons for no longer being enrolled: \nTransferred to another health insurance program other than CHIP
-            \nDidn’t meet eligibility criteria anymore
-            \nDidn’t complete documentation
-            \nDidn’t pay a premium or enrollment fee"
+            id={`2021-03-c-04-04-a`}
+            title=""
+            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
+            hint=""
+            subquestion
           />
+          <TextField id={`2021-03-c-04-05`} label="5. Anything else you’d like to add about your data?" multiline />
+          <div className="ds-c-field__hint ds-u-margin-top--4">Next year you’ll submit the rest of your data at 12 months and 18 months later of tracking your cohort</div>
           <InputGrid
             id={`2021-03-c-04-06`}
+            title="January - March 2021 (12 months later)"
+            label="6. How many children were still continuously enrolled in CHIP 12 months later?"
+            hint="Only include children that didn’t have a break in coverage during the 12-month period."
+          />
+          <InputGrid
+            id={`2021-03-c-04-07`}
             title=""
-            label="How many children were no longer enrolled in CHIP but were enrolled in Medicaid six months later?"
+            label="7. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later?"
             hint=""
           />
-
-          <TextField id={`2021-03-c-04-07`} label={`${`7`}. Anything else you'd like to add about your data?`} multiline />
+          <InputGrid
+            id={`2021-03-c-04-07-a`}
+            title=""
+            label="a. How many children had a break in CHIP coverage but were re-enrolled in CHIP 12 months later, and enrolled in Medicaid during this break?"
+            hint=""
+            subquestion
+          />
+          <InputGrid
+            id={`2021-03-c-04-08`}
+            title=""
+            label="8. How many children were no longer enrolled in CHIP 12 months later?"
+            helpDrawer="Possible reasons for not being enrolled:\n
+            Transferred to another health insurance program other than CHIP\n
+            Didn’t meet eligibility criteria anymore\n
+            Didn’t complete documentation\n
+            Didn’t pay a premium or enrollment fee\n
+            "
+          />
+          <InputGrid
+            id={`2021-03-c-04-08-a`}
+            title=""
+            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 12 months later?"
+            hint=""
+            subquestion
+          />
+          <InputGrid
+            id={`2021-03-c-04-09`}
+            title="July - September of 2021 (18 months later)"
+            label="9. How many children were still continuously enrolled in CHIP 18 months later?"
+            hint="Only include children that didn’t have a break in coverage throughout the 18-month period."
+          />
+          <InputGrid
+            id={`2020-03-c-04-10`}
+            title=""
+            label="10. How many children had a break in CHIP coverage but were re-enrolled in CHIP 18 months later?"
+            hint=""
+          />
+          <InputGrid
+            id={`2020-03-c-04-10-a`}
+            title=""
+            label="a. How many children had a break in CHIP coverage but were enrolled in CHIP 18 months later, and enrolled in Medicaid during the break?"
+            hint=""
+            subquestion
+          />
+          <InputGrid
+            id={`2020-03-c-04-11`}
+            title=""
+            label="11. How many children were no longer enrolled in CHIP 18 months later?"
+            helpDrawer="Possible reasons for not being enrolled:\n
+            Transferred to another health insurance program other than CHIP\n
+            Didn’t meet eligibility criteria anymore\n
+            Didn’t complete documentation\n
+            Didn’t pay a premium or enrollment fee\n
+            "
+          />
+          <InputGrid
+            id={`2020-03-c-04-11-a`}
+            title=""
+            label="a. How many children were no longer enrolled in CHIP but were enrolled in Medicaid 18 months later?"
+            hint=""
+            subquestion
+          />
+          <TextField id={`2021-03-c-04-07`} label={`12. Anything else you’d like to add about your data?`} multiline />
 
           <SynthesizedTable
             type="synthesized"
