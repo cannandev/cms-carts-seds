@@ -464,7 +464,7 @@ class Questions3C extends Component {
           <TextField id={`2020-03-c-03-01`} label={`1. How many children were eligible for redetermination in CHIP in the last federal fiscal year?`} size="small" numeric />
           <TextField id={`2020-03-c-03-02`} label={`2. Of the eligible children, how many were then screened for redetermination?`} size="small" numeric />
           <TextField id={`2020-03-c-03-03`} label={`3. How many children were retained in CHIP after the redetermination process?`} size="small" numeric />
-          <TextField id={`2020-03-c-03-04`} label={`4. How many children were disenrolled in CHIP after the redetermination process?`} size="small" hint="This number should be equal to the total of 4a, 4b, and 4c below." numeric />
+          <TextField id={`2020-03-c-03-04`} label={`4. How many children were disenrolled in CHIP after the redetermination process?`} size="small" hint="This number should be equal to the total of 4a, 4b, and 4c below." numeric disabled />
           <fieldset>
             <TextField id={`2020-03-c-03-04-a`} label={`a. How many children were disenrolled for procedural reasons?`} size="small" numeric className="subquestion" />
             <TextField id={`2020-03-c-03-04-b`} label={`b. How many children were disenrolled for eligibility reasons?`} size="small" numeric className="subquestion" />
