@@ -487,7 +487,10 @@ class Questions3C extends Component {
 
           <TextField id={`2021-03-c-04-07`} label={`${`7`}. Anything else you'd like to add about your data?`} multiline />
 
-          <SynthesizedTable type="synthesized" title="(Autocalculated synthesized table)" />
+          <SynthesizedTable
+            type="synthesized"
+            title="Your summarized data"
+            hint="This table is auto-populated with your answers in Part 4 above." />
         </div>
       </form >
     )
