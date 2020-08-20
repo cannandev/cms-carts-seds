@@ -439,7 +439,84 @@ class Questions3C extends Component {
         </div>
 
         <div className="part" id={"2021-03-c-03"}>
-          <h3 className="part-part__header">Part 3: Eligibility for Redetermination in CHIP</h3>
+          <h3 className="part__header">Part 3: Eligibility for Redetermination in CHIP</h3>
+          <div className="part__description">
+            <p>Redetermination is the process of redetermining whether a child is eligible to renew in CHIP every 12 months, assuming children haven’t already aged out of the program. Families must resubmit their income each year to determine if they still qualify for the program.</p>
+          </div>
+          <TextField id={`2020-03-c-03-01`} label={`1. How many children were eligible for redetermination in CHIP in the last federal fiscal year?`} size="small" numeric />
+          <TextField id={`2020-03-c-03-02`} label={`2. Of the eligible children, how many were then screened for redetermination?`} size="small" numeric />
+          <TextField id={`2020-03-c-03-03`} label={`3. How many children were retained in CHIP after the redetermination process?`} size="small" numeric />
+          <TextField id={`2020-03-c-03-04`} label={`4. How many children were disenrolled in CHIP after the redetermination process?`} size="small" hint="This number should be equal to the total of 4a, 4b, and 4c below." numeric />
+          <fieldset>
+            <TextField id={`2020-03-c-03-04-a`} label={`a. How many children were disenrolled for procedural reasons?`} size="small" numeric className="subquestion" />
+            <TextField id={`2020-03-c-03-04-b`} label={`b. How many children were disenrolled for eligibility reasons?`} size="small" numeric className="subquestion" />
+            <TextField id={`2020-03-c-03-04-c`} label={`c. How many children were disenrolled for other reasons?`} size="small" numeric className="subquestion" />
+          </fieldset>
+          <TextField id={`2020-03-c-03-05`} label={`5. Did you have any limitations in collecting this data?`} multiline />
+          <fieldset>
+            <legend>Table: Enrollment Data for CHIP Redetermination</legend>
+            <table class="ds-c-table ds-u-margin-top--2" id="synthesized-table-2">
+              <caption class="ds-c-table__caption">The tables are auto-populated with the data you entered above.</caption>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Percent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Children screened for redetermination</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Children retained after redetermination</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Children disenrolled after redetermination</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+          <fieldset>
+            <legend>Disenrollment Data for CHIP Redetermination</legend>
+            <table class="ds-c-table ds-u-margin-top--2" id="synthesized-table-3">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Percent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Children disenrolled after redeterminationn</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Children disenrolled for procedural reasons</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Children disenrolled for eligibility reasons</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Children disenrolled for other reasons</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
         </div>
 
         <div className="part" id={"2021-03-c-04"}>
