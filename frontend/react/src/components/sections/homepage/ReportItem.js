@@ -28,7 +28,7 @@ class ReportItem extends Component {
         <div className="name ds-l-col--1">{this.props.name}</div>
         <div className={`status ds-l-col ${statusText === 'Overdue' && `alert`}`}>{statusURL}</div>
         <div className="last-edited ds-l-col--5">
-          {this.props.lastEditedTime}|{this.props.lastEditedDate}{" "}
+          {`${this.props.lastEditedDate} at ${this.props.lastEditedTime} by ${this.props.editor}`}
         </div>
         <div className="actions ds-l-col">
           <a href={link1URL} target={anchorTarget}>

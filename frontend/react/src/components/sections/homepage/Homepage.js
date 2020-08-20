@@ -44,6 +44,7 @@ class Homepage extends Component {
                   link2URL="#"
                   link2Text="View only"
                   statusText="Overdue"
+                  editor="karen.dalton"
                 />
 
                 <ReportItem
@@ -53,6 +54,7 @@ class Homepage extends Component {
                   link1URL="/reports/ny/2019"
                   link2URL="#"
                   statusText="Submitted"
+                  editor="karen.dalton"
                 />
 
                 <ReportItem
@@ -64,6 +66,7 @@ class Homepage extends Component {
                   link2URL="#"
                   link2Text="View only"
                   statusText="Uncertified"
+                  editor="karen.dalton"
                 />
 
                 <ReportItem
@@ -72,6 +75,7 @@ class Homepage extends Component {
                   lastEditedDate="2/13/18"
                   link1URL="/reports/ny/2017"
                   link2URL="#"
+                  editor="karen.dalton"
                 />
 
                 <ReportItem
@@ -80,6 +84,7 @@ class Homepage extends Component {
                   lastEditedDate="3/20/17"
                   link1URL="/reports/ny/2016"
                   link2URL="#"
+                  editor="karen.dalton"
                 />
               </div>
             </div>
