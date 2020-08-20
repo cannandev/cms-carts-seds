@@ -320,7 +320,7 @@ class Questions3C extends Component {
         </div>
 
         <div className="part" id={`2020-03-c-02`}>
-          <h3 className="part-header">Part 2: Eligibility Data</h3>
+          <h3 className="part__header">Part 2: Eligibility Denials for First-time Applicants (Not Redetermination)</h3>
           <div className="question-container">
             {this.props.previousYear === "false" &&
               <FillForm
@@ -330,20 +330,15 @@ class Questions3C extends Component {
                 type="textField"
               />
             }
-            <div className="question">
-              A. Denials of Title XXI Coverage in FFY 2020
-              <div className="hint">
-                Enter your data below and the percentages will be
-                automatically calculated in the final report.
-              </div>
-            </div>
             <TextField
-              hint="This only includes denials for Title XXI at the time of initial application, not redetermination"
-              label="1. How many applicants were denied Title XXI coverage?"
+              hint="This only applies to denials for first-time CHIP applicants—don’t include applicants being considered for redetermination."
+              label="1. How many first-time applicants were denied CHIP coverage in the last federal fiscal year? "
               labelClassName="p2_q1"
               name="p2_q1"
               value={this.state.p2_q1}
               onChange={this.changeText}
+              size="small"
+              numeric
             />
           </div>
           <div className="question-container">
@@ -356,12 +351,15 @@ class Questions3C extends Component {
               />
             }
             <TextField
-              hint="For example: an incomplete application, missing documentation, missing enrollment fee, etc."
-              label="2. How many applications were denied Title XXI coverage for procedural denials?"
+              id="2020-03-c-02-03"
+              hint="For example: They were denied because of an incomplete application, missing documentation, or a missing enrollment fee."
+              label="2. How many first-time applicants were denied CHIP coverage for procedural reasons?"
               labelClassName="p2_q2"
               name="p2_q2"
               value={this.state.p2_q2}
               onChange={this.changeText}
+              size="small"
+              numeric
             />
           </div>
           <div className="question-container">
@@ -374,12 +372,36 @@ class Questions3C extends Component {
               />
             }
             <TextField
-              hint="For example: income was too high, income was too low, they were determined Medicaid eligible instead, they had other coverage instead, etc."
-              label="3. How many applicants were denied Title XXI coverage for eligibility denials?"
+              id="2020-03-c-02-03"
+              hint="For example: They were denied because their income was too high or too low, they were determined eligible for Medicaid instead, or they had other coverage available."
+              label="3. How many first-time applicants were denied CHIP coverage for eligibility reasons?"
               labelClassName="p2_q3"
               name="p2_q3"
               value={this.state.p2_q3}
               onChange={this.changeText}
+              size="small"
+              numeric
+            />
+          </div>
+          <div className="question-container">
+            {this.props.previousYear === "false" &&
+              <FillForm
+                name="p2_q3_a"
+                title={this.state.fillFormTitle}
+                onClick={this.loadAnswers}
+                type="textField"
+              />
+            }
+            <TextField
+              id="2020-03-c-02-03-a"
+              label="a. How many first-time applicants were denied CHIP coverage and determined eligible for Medicaid (Title XIX) instead?"
+              labelClassName="p2_q3_a"
+              className="subquestion"
+              name="p2_q3_a"
+              value={this.state.p2_q3_a}
+              onChange={this.changeText}
+              size="small"
+              numeric
             />
           </div>
           <div className="question-container">
@@ -392,11 +414,14 @@ class Questions3C extends Component {
               />
             }
             <TextField
-              label="4. How many applicants were denied Title XXI coverage and determined eligible for Title XIX instead?"
+              id="2020-03-c-02-04"
+              label="4. How many applicants were denied CHIP coverage for other reasons?"
               labelClassName="p2_q4"
               name="p2_q4"
               value={this.state.p2_q4}
               onChange={this.changeText}
+              size="small"
+              numeric
             />
           </div>
           <div className="question-container">
@@ -409,31 +434,13 @@ class Questions3C extends Component {
               />
             }
             <TextField
-              label="5. How many applicants were denied Title XXI coverage for other reasons?"
+              id="2020-03-c-02-05"
+              label="5. Did you have any limitations in collecting this data?"
               labelClassName="p2_q5"
               name="p2_q5"
               value={this.state.p2_q5}
               onChange={this.changeText}
-            />
-          </div>
-          <div className="question-container">
-            {this.props.previousYear === "false" &&
-              <FillForm
-                name="p2_q6"
-                title={this.state.fillFormTitle}
-                onClick={this.loadAnswers}
-                type="textField"
-              />
-            }
-            <TextField
-              hint="(Maximum 7,500 characters)"
-              label="6. Did you run into any limitations when collecting data? Anything else you'd like to add about this section that wasn't already covered?"
-              labelClassName="p2_q6"
               multiline
-              name="p2_q6"
-              rows="6"
-              value={this.state.p2_q6}
-              onChange={this.changeText}
             />
           </div>
         </div>
