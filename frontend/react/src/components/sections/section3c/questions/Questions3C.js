@@ -102,8 +102,6 @@ class Questions3C extends Component {
     }
   }
 
-
-
   render() {
     return (
       <form>

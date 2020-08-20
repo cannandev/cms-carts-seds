@@ -1,6 +1,6 @@
 import React from "react"
-import { TextField, HelpDrawerToggle } from "@cmsgov/design-system-core"
-import { HelpDrawer } from "./../layout/HelpDrawer";
+import { TextField } from "@cmsgov/design-system-core"
+import { InputGridHint } from "./InputGridHint"
 
 
 export const InputGrid = question => {
@@ -9,7 +9,7 @@ export const InputGrid = question => {
     <div className={`input-grid ${subStyle}`}>
       <label className="ds-c-label" >{question.label}</label>
       <span className="ds-c-field__hint">{question.hint}</span>
-      {question.helpDrawer && <HelpDrawerToggle>Possible reasons for not being enrolled</HelpDrawerToggle>}
+      {question.helpDrawer && <InputGridHint />}
       <div className="ds-l-row input-grid__total">
         <div className="ds-l-col"><TextField name={`${question.id}-a`} id={`${question.id}-a`} numeric label="Total for all ages (0-16 year olds)" size="medium" /></div>
       </div>
@@ -19,7 +19,6 @@ export const InputGrid = question => {
         <div className="ds-l-col"><TextField name={`${question.id}-d`} id={`${question.id}-d`} numeric label="6-12 year olds" /></div>
         <div className="ds-l-col"><TextField name={`${question.id}-e`} id={`${question.id}-e`} numeric label="13-16 year olds" /></div>
       </div>
-      {/* <HelpDrawer /> */}
     </div>
   )
 }
