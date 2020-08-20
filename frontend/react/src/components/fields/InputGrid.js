@@ -4,8 +4,9 @@ import { HelpDrawer } from "./../layout/HelpDrawer";
 
 
 export const InputGrid = question => {
+  const subStyle = question.subquestion ? `ds-u-padding--2 ds-c-choice__checkedChild` : `ds-u-padding--1`
   return (
-    <div className={`input-grid ds-l-container ds-u-padding--1 ${question.subquestion ? `ds-u-margin-left--4` : ``}`}>
+    <div className={`input-grid ${subStyle}`}>
       <label className="ds-c-label" >{question.label}</label>
       <span className="ds-c-field__hint">{question.hint}</span>
       {question.helpDrawer && <HelpDrawerToggle>Possible reasons for not being enrolled</HelpDrawerToggle>}
