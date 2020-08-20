@@ -118,54 +118,56 @@ class Questions3C extends Component {
                 type="textField"
               />
             }
-            <label className="question">1. Does your state provide presumptive eligibility, allowing children who are presumed to be eligible to access CHIP services?</label>
-            <div id="p1_q1">
-              <Choice
-                name="p1_q1"
-                type="radio"
-                value="yes"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "yes" ? true : false}
-                onChange={this.setConditional}
-                checkedChildren={
-                  <div className="ds-c-choice__checkedChild">
-                    <TextField
-                      label="What percent of children are presumptively enrolled in CHIP pending a full eligibility determination?"
-                      multiline
-                      name="p1_q1_a"
-                      value={this.state.p1_q1_a}
-                      onChange={this.changeText}
-                    />
-                    <TextField
-                      label="Of the children who are presumptively enrolled, what percent are determined fully eligible and enrolled in the program?"
-                      multiline
-                      name="p1_q1_b"
-                      value={this.state.p1_q1_b}
-                      onChange={this.changeText}
-                    />
-                  </div>
-                }
-              >
-                Yes
+            <fieldset id="2020-03-c-01-01">
+              <label className="question">1. Does your state provide presumptive eligibility, allowing children who are presumed to be eligible to access CHIP services?</label>
+              <div id="p1_q1">
+                <Choice
+                  name="p1_q1"
+                  type="radio"
+                  value="yes"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "yes" ? true : false}
+                  onChange={this.setConditional}
+                  checkedChildren={
+                    <div className="ds-c-choice__checkedChild">
+                      <TextField
+                        label="What percent of children are presumptively enrolled in CHIP pending a full eligibility determination?"
+                        multiline
+                        name="p1_q1_a"
+                        value={this.state.p1_q1_a}
+                        onChange={this.changeText}
+                      />
+                      <TextField
+                        label="Of the children who are presumptively enrolled, what percent are determined fully eligible and enrolled in the program?"
+                        multiline
+                        name="p1_q1_b"
+                        value={this.state.p1_q1_b}
+                        onChange={this.changeText}
+                      />
+                    </div>
+                  }
+                >
+                  Yes
               </Choice>
-              <Choice
-                name="p1_q1"
-                type="radio"
-                value="no"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "no" ? true : false}
-                onChange={this.setConditional}
-              >
-                No
+                <Choice
+                  name="p1_q1"
+                  type="radio"
+                  value="no"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "no" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  No
                   </Choice>
-              <Choice
-                name="p1_q1"
-                type="radio"
-                value="na"
-                defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "no" ? true : false}
-                onChange={this.setConditional}
-              >
-                N/A
+                <Choice
+                  name="p1_q1"
+                  type="radio"
+                  value="na"
+                  defaultChecked={this.props.previousEntry === "true" && this.state.previousp1_q1 === "no" ? true : false}
+                  onChange={this.setConditional}
+                >
+                  N/A
                   </Choice>
-            </div>
+              </div>
+            </fieldset>
           </div>
           <div className="question-container">
             {this.props.previousYear === "false" &&
@@ -198,7 +200,7 @@ class Questions3C extends Component {
                 </Choice>
             </fieldset>
           </div>
-          <div>
+          <div className="question-container">
             {this.props.previousYear === "false" &&
               <FillForm
                 name="p1_q3"
