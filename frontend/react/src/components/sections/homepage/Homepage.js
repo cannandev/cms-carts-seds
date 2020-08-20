@@ -15,44 +15,37 @@ class Homepage extends Component {
     return (
       <div className="homepage">
         <div className="ds-l-container">
-          <div className="ds-l-row">
-            <div className="page-title ds-l-col--12">
-              <h1>
-                CHIP Annual Report Template System (CARTS)
-              </h1>
-            </div>
+          <div className="ds-l-row ds-u-padding-left--2">
+            <h1 className="ds-u-margin-bottom--0">CHIP Annual Report Template System (CARTS)</h1>
           </div>
-
-
+          <div className="ds-l-row ds-u-margin-bottom--2">
+            <div className="ds-l-col--12">
+              <p className="ds-u-margin-bottom--2">Welcome to CARTS! We’ve incorporated feedback from several states to bring you a better CARTS experience. Contact <a href="mailto:CARTSHELP@cms.hhs.gov?subject=CARTS Help request">CARTSHELP@cms.hhs.gov</a> with any questions.
+</p>
+            </div>
+            <legend className="ds-u-padding--2 ds-h3">All Reports</legend>
+          </div>
           <div className="ds-l-row">
             <div className="reports ds-l-col--12">
-              <h3 className="report-section-title ds-l-col--12">
-                CARTS FY 2020 report is ready to download
-              </h3>
-              <p className="ds-l-col--12 ds-u-margin-bottom--2">Welcome to CARTS! We’ve incorporated feedback from several states to bring you a better CARTS experience. Contact <a href="mailto:CARTSHELP@cms.hhs.gov?subject=CARTS Help request">CARTSHELP@cms.hhs.gov</a> with any questions.
-</p>
-
-              <div className="carts-report ds-l-container preview__grid">
+              <div className="carts-report preview__grid">
                 <div className="report-header ds-l-row">
-                  <div className="name ds-l-col">Name</div>
-                  <div className="status ds-l-col">Status</div>
-                  <div className="last-edited ds-l-col">Last Edited</div>
-                  <div className="actions ds-l-col">Actions</div>
+                  <div className="name ds-l-col--3">Year</div>
+                  <div className="status ds-l-col--3">Status</div>
+                  <div className="last-edited ds-l-col--3">Last Edited</div>
+                  <div className="actions ds-l-col--3">Actions</div>
                 </div>
 
                 <ReportItem
-                  name="NY-CARTS-FY2020"
+                  name="2020"
                   lastEditedTime="1:32pm"
                   lastEditedDate="9/21/20"
                   link1URL="/basic-info"
                   link1Text="Edit"
-                  link2URL="/reports/ny/2020"
-                  link2Text="Download"
                   statusText="Draft"
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2019"
+                  name="2019"
                   lastEditedTime="7:32am"
                   lastEditedDate="3/20/20"
                   link1URL="/reports/ny/2019"
@@ -61,7 +54,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2018"
+                  name="2018"
                   lastEditedTime="5:43pm"
                   lastEditedDate="1/26/19"
                   link1URL="/reports/ny/2018"
@@ -70,7 +63,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2017"
+                  name="2017"
                   lastEditedTime="5:00am"
                   lastEditedDate="2/13/18"
                   link1URL="/reports/ny/2017"
@@ -79,7 +72,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2016"
+                  name="2016"
                   lastEditedTime="9:13pm"
                   lastEditedDate="3/20/17"
                   link1URL="/reports/ny/2016"
@@ -88,7 +81,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2015"
+                  name="2015"
                   lastEditedTime="9:00am"
                   lastEditedDate="1/20/16"
                   link1URL="/reports/ny/2015"
@@ -97,7 +90,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2014"
+                  name="2014"
                   lastEditedTime="4:44pm"
                   lastEditedDate="3/20/15"
                   link1URL="/reports/ny/2014"
@@ -106,7 +99,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2013"
+                  name="2013"
                   lastEditedTime="5:05am"
                   lastEditedDate="3/24/14"
                   link1URL="/reports/ny/2013"
@@ -115,7 +108,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2012"
+                  name="2012"
                   lastEditedTime="9:00am"
                   lastEditedDate="2/02/13"
                   link1URL="/reports/ny/2012"
@@ -124,7 +117,7 @@ class Homepage extends Component {
                 />
 
                 <ReportItem
-                  name="NY-CARTS-FY2011"
+                  name="2011"
                   lastEditedTime="11:30am"
                   lastEditedDate="3/20/12"
                   link1URL="/reports/ny/2011"
