@@ -17,17 +17,17 @@ class ReportItem extends Component {
     let statusURL = this.props.statusURL ? (
       <a href={this.props.statusURL}> {statusText} </a>
     ) : (
-      statusText
-    );
+        statusText
+      );
 
     let anchorTarget = this.props.link1Text === "Edit" ? "_self" : "_blank";
 
     let windowLocation;
     return (
       <div className="report-item ds-l-row">
-        <div className="name ds-l-col">{this.props.name}</div>
+        <div className="name ds-l-col--1">{this.props.name}</div>
         <div className="status ds-l-col">{statusURL}</div>
-        <div className="last-edited ds-l-col">
+        <div className="last-edited ds-l-col--5">
           {this.props.lastEditedTime}|{this.props.lastEditedDate}{" "}
         </div>
         <div className="actions ds-l-col">
