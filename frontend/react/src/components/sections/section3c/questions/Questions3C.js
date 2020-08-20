@@ -479,12 +479,7 @@ class Questions3C extends Component {
             <InputGrid
               id={`2021-03-c-04-04`}
               label="4. How many children were no longer enrolled in CHIP six months later?"
-              helpDrawer="Possible reasons for no longer being enrolled:\n
-              Transferred to another health insurance program other than CHIP\n
-              Didn’t meet eligibility criteria anymore\n
-              Didn’t complete documentation\n
-              Didn’t pay a premium or enrollment fee\n
-            "
+              helpDrawer
             />
             <InputGrid
               id={`2021-03-c-04-04-a`}
