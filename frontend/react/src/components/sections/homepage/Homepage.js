@@ -18,8 +18,7 @@ class Homepage extends Component {
           <div className="ds-l-row">
             <div className="page-title ds-l-col--12">
               <h1>
-                Children's Health Insurance Program Annual Report Template
-                System (CARTS)
+                CHIP Annual Report Template System (CARTS)
               </h1>
             </div>
           </div>
@@ -34,18 +33,13 @@ class Homepage extends Component {
                 </div>
                 <div className="update-contents ds-l-col--10">
                   <div className="title-date ds-l-row">
-                    <div className="title ds-l-col--6">
+                    <div className="title ds-l-col--7">
                       <h3>FY20 template is ready for download</h3>
                     </div>
-                    <div className="date ds-l-col--6">AUG, 15, 2019</div>
+                    <div className="date ds-l-col--5">AUG, 15, 2019</div>
                   </div>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque ornare, dolor sit amet luctus rhoncus, risus ex
-                    efficitur massa, eu lacinia odio diam in leo. Donec nisl
-                    tortor, ullamcorper ut tincidunt ultrices, vestibulum a
-                    augue. Class aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos.
+                    Welcome to CARTS! We’ve incorporated feedback from several states to bring you a better CARTS experience. Contact <a href="mailto:CARTSHELP@cms.hhs.gov?subject=CARTS Help request">CARTSHELP@cms.hhs.gov</a> with any questions.
                   </p>
                   <div className="download">
                     <button className="ds-c-button ds-c-button--primary">
@@ -60,7 +54,7 @@ class Homepage extends Component {
           <div className="ds-l-row">
             <div className="reports ds-l-col--12">
               <h3 className="report-section-title ds-l-col--12">
-                CARTS reports
+                CARTS FY 2020 report is ready to download
               </h3>
 
               <div className="carts-report ds-l-container preview__grid">
