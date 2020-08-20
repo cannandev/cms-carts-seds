@@ -16,7 +16,7 @@ class Homepage extends Component {
       <div className="homepage">
         <div className="ds-l-container">
           <div className="ds-l-row ds-u-padding-left--2">
-            <h1 className="ds-u-margin-bottom--0">CHIP Annual Report Template System (CARTS)</h1>
+            <h1 className="page-title ds-u-margin-bottom--0">CHIP Annual Report Template System (CARTS)</h1>
           </div>
           <div className="ds-l-row ds-u-margin-bottom--2">
             <div className="ds-l-col--12">
@@ -41,7 +41,9 @@ class Homepage extends Component {
                   lastEditedDate="9/21/20"
                   link1URL="/basic-info"
                   link1Text="Edit"
-                  statusText="Draft"
+                  link2URL="#"
+                  link2Text="View only"
+                  statusText="Overdue"
                 />
 
                 <ReportItem
@@ -50,7 +52,7 @@ class Homepage extends Component {
                   lastEditedDate="3/20/20"
                   link1URL="/reports/ny/2019"
                   link2URL="#"
-                  statusText="Under review"
+                  statusText="Submitted"
                 />
 
                 <ReportItem
@@ -58,8 +60,10 @@ class Homepage extends Component {
                   lastEditedTime="5:43pm"
                   lastEditedDate="1/26/19"
                   link1URL="/reports/ny/2018"
+                  link1Text="Edit"
                   link2URL="#"
-                  statusURL="#"
+                  link2Text="View only"
+                  statusText="Uncertified"
                 />
 
                 <ReportItem
@@ -68,7 +72,6 @@ class Homepage extends Component {
                   lastEditedDate="2/13/18"
                   link1URL="/reports/ny/2017"
                   link2URL="#"
-                  statusURL="#"
                 />
 
                 <ReportItem
@@ -77,7 +80,6 @@ class Homepage extends Component {
                   lastEditedDate="3/20/17"
                   link1URL="/reports/ny/2016"
                   link2URL="#"
-                  statusURL="#"
                 />
               </div>
             </div>

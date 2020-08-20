@@ -68,6 +68,14 @@
       color: $black;
       font-weight: $font-weight-bold;
     }
+
+    .status {
+      color: $brand-primary;
+    }
+
+    .status.alert {
+      color: red;
+    }
   }
 }
 
@@ -118,6 +126,7 @@
   .page-title {
     margin-top: ($margin * 4);
     margin-bottom: $margin;
+    font-weight: $font-weight-bold;
   }
 
   .report-section-title {

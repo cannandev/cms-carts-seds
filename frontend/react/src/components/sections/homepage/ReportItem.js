@@ -6,13 +6,13 @@ class ReportItem extends Component {
     this.state = {};
   }
   render() {
-    let link1Text = this.props.link1Text ? this.props.link1Text : "View";
+    let link1Text = this.props.link1Text ? this.props.link1Text : "View only";
     let link1URL = this.props.link1URL ? this.props.link1URL : "#";
     let link2Text = this.props.link2Text ? this.props.link2Text : "Uncertify";
     let link2URL = this.props.link2URL ? this.props.link2URL : "#xxxx";
     let statusText = this.props.statusText
       ? this.props.statusText
-      : "Posted on Medicaid.gov";
+      : "Submitted";
 
     let statusURL = this.props.statusURL ? (
       <a href={this.props.statusURL}> {statusText} </a>
@@ -26,7 +26,7 @@ class ReportItem extends Component {
     return (
       <div className="report-item ds-l-row">
         <div className="name ds-l-col--1">{this.props.name}</div>
-        <div className="status ds-l-col">{statusURL}</div>
+        <div className={`status ds-l-col ${statusText === 'Overdue' && `alert`}`}>{statusURL}</div>
         <div className="last-edited ds-l-col--5">
           {this.props.lastEditedTime}|{this.props.lastEditedDate}{" "}
         </div>
