@@ -36,11 +36,7 @@ class Header extends Component {
             </div>
             <div className="user-details ds-l-col--6 ds-u-padding--2">
               <div className="ds-l-row">
-<<<<<<< HEAD
-                <div className="save-status ds-l-col--6 ds-u-border--0">Autosaved</div>
-=======
                 <Autosave />
->>>>>>> feature/remove-autosave
                 <div className="nav-user ds-l-col--6" id="nav-user">
                   <ul className="user-email-button">
                     <li>
